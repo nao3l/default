@@ -8,6 +8,7 @@ test('検索から詳細を開き、お気に入りに入れて表現帳で見�
 
   await page.getByRole('link', { name: /I am much obliged/ }).click();
   await expect(page.getByRole('heading', { name: 'I am much obliged.' })).toBeVisible();
+  await expect(page.getByText('出典未詳')).toBeVisible();
   await page.getByRole('button', { name: '☆ お気に入り' }).click();
   await expect(page.getByRole('button', { name: '★ お気に入り済み' })).toBeVisible();
 

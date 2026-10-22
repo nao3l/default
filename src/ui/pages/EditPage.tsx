@@ -25,7 +25,9 @@ interface FormState {
   examples: string;
   tags: string;
   keywords: string;
-  citation: string;
+  citationTitle: string;
+  citationPublisher: string;
+  citationUrl: string;
 }
 
 const BLANK: FormState = {
@@ -40,7 +42,9 @@ const BLANK: FormState = {
   examples: '',
   tags: '',
   keywords: '',
-  citation: '',
+  citationTitle: '',
+  citationPublisher: '',
+  citationUrl: '',
 };
 
 function toForm(e: Expression): FormState {
@@ -56,7 +60,9 @@ function toForm(e: Expression): FormState {
     examples: e.examples.join('\n'),
     tags: e.tags.join('、'),
     keywords: e.keywords.join('、'),
-    citation: e.citation ?? '',
+    citationTitle: e.citation?.title ?? '',
+    citationPublisher: e.citation?.publisher ?? '',
+    citationUrl: e.citation?.url ?? '',
   };
 }
 
@@ -80,7 +86,13 @@ function toDraft(form: FormState, scene: Scene): ExpressionDraft {
     examples: splitList(form.examples, /\n/),
     tags: splitList(form.tags, /[、,]/),
     keywords: splitList(form.keywords, /[、,]/),
-    citation: optional(form.citation),
+    citation: form.citationTitle.trim()
+      ? {
+          title: form.citationTitle.trim(),
+          publisher: optional(form.citationPublisher),
+          url: optional(form.citationUrl),
+        }
+      : undefined,
   };
 }
 
@@ -232,8 +244,28 @@ export function EditPage() {
           />
         </label>
         <label>
-          出典
-          <input value={form.citation} onChange={(e) => set({ citation: e.target.value })} />
+          出典（書名・ページ名）
+          <input
+            value={form.citationTitle}
+            onChange={(e) => set({ citationTitle: e.target.value })}
+            placeholder="空欄なら「出典未詳」と表示します"
+          />
+        </label>
+        <label>
+          出典の発行元
+          <input
+            value={form.citationPublisher}
+            onChange={(e) => set({ citationPublisher: e.target.value })}
+          />
+        </label>
+        <label>
+          出典の URL
+          <input
+            type="url"
+            value={form.citationUrl}
+            onChange={(e) => set({ citationUrl: e.target.value })}
+            placeholder="https://"
+          />
         </label>
       </details>
 

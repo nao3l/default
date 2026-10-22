@@ -23,6 +23,7 @@ export function ExpressionCard({
           <span className="badge">{FORMALITY_LABELS[expression.formality]}</span>
           {expression.archaic && <span className="badge badge-accent">古風</span>}
           {expression.source === 'user' && <span className="badge badge-accent">自分の登録</span>}
+          {expression.citation && <span className="badge">出典あり</span>}
           {favorite && (
             <span className="badge badge-fav" aria-label="お気に入り">
               ★

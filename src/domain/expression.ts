@@ -44,6 +44,13 @@ export const langSchema = z.enum(['ja', 'en']);
 
 const nonEmpty = z.string().trim().min(1);
 
+// 出典。公的機関や辞書出版社など、信頼できる発行元を優先する。無い場合は項目ごと省き「出典未詳」と表示する
+export const citationSchema = z.object({
+  title: nonEmpty, // 例：デジタル大辞泉「痛み入る」
+  publisher: nonEmpty.optional(), // 例：小学館
+  url: z.url({ protocol: /^https?$/ }).optional(),
+});
+
 export const expressionSchema = z.object({
   id: nonEmpty,
   source: z.enum(['builtin', 'user']),
@@ -58,7 +65,7 @@ export const expressionSchema = z.object({
   examples: z.array(nonEmpty),
   tags: z.array(nonEmpty),
   keywords: z.array(nonEmpty),
-  citation: nonEmpty.optional(),
+  citation: citationSchema.optional(),
   createdAt: z.iso.datetime().optional(),
   updatedAt: z.iso.datetime().optional(),
 });
@@ -81,6 +88,7 @@ export type Lang = z.infer<typeof langSchema>;
 export type Expression = z.infer<typeof expressionSchema>;
 export type BuiltinEntry = z.infer<typeof builtinEntrySchema>;
 export type Annotation = z.infer<typeof annotationSchema>;
+export type Citation = z.infer<typeof citationSchema>;
 
 // 登録フォームから受け取る項目（id や日時はリポジトリ層が付ける）
 export type ExpressionDraft = Omit<Expression, 'id' | 'source' | 'createdAt' | 'updatedAt'>;

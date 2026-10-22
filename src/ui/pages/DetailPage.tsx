@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FORMALITY_LABELS, LANG_LABELS, SCENE_LABELS } from '../../domain/expression';
 import { useApp } from '../AppContext';
+import { CitationText } from '../components/CitationText';
 
 export function DetailPage() {
   const { id = '' } = useParams();
@@ -109,12 +110,10 @@ export function DetailPage() {
             </dd>
           </>
         )}
-        {expression.citation && (
-          <>
-            <dt>出典</dt>
-            <dd>{expression.citation}</dd>
-          </>
-        )}
+        <dt>出典</dt>
+        <dd>
+          <CitationText citation={expression.citation} />
+        </dd>
       </dl>
 
       <section className="note">

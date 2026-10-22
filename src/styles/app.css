@@ -469,3 +469,7 @@ h2,
 .settings p {
   margin: 8px 0;
 }
+
+.muted {
+  color: var(--text-muted);
+}
