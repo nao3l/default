@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0037",
+    "text": "恐れ入ります",
+    "reading": "おそれいります",
+    "lang": "ja",
+    "scene": "humility",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "相手の厚意や称賛に恐縮する気持ちを表す。",
+    "usage": "感謝にも、依頼の前置きにも使える。",
+    "examples": ["お褒めにあずかり、恐れ入ります。"],
+    "tags": [],
+    "keywords": ["恐縮", "謙遜", "ありがとう"]
+  },
+  {
+    "id": "builtin-0038",
+    "text": "非才の身ではありますが",
+    "reading": "ひさいのみではありますが",
+    "lang": "ja",
+    "scene": "humility",
+    "formality": 3,
+    "archaic": false,
+    "meaning": "才能の乏しい自分ではあるが、と謙遜する前置き。",
+    "usage": "就任の挨拶などで。",
+    "examples": ["非才の身ではありますが、精一杯務めさせていただきます。"],
+    "tags": ["ビジネス"],
+    "keywords": ["謙遜", "未熟", "就任"]
+  },
+  {
+    "id": "builtin-0039",
+    "text": "You flatter me.",
+    "lang": "en",
+    "scene": "humility",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "お褒めが過ぎますよ（恐縮です）。",
+    "usage": "褒められたときの控えめな返し。",
+    "examples": ["You flatter me, sir, but the credit belongs to my team."],
+    "tags": [],
+    "keywords": ["謙遜", "恐縮"]
+  },
+  {
+    "id": "builtin-0040",
+    "text": "I am but a humble servant.",
+    "lang": "en",
+    "scene": "humility",
+    "formality": 3,
+    "archaic": true,
+    "meaning": "私は一介のしがない者にすぎません。",
+    "usage": "古風で芝居がかった謙遜。冗談めかして使うことも。",
+    "examples": ["I am but a humble servant of this house."],
+    "tags": ["英国風"],
+    "keywords": ["謙遜", "恐縮"]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0013",
+    "text": "さすがのご慧眼です",
+    "reading": "さすがのごけいがんです",
+    "lang": "ja",
+    "scene": "praise",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "物事の本質を見抜く鋭い眼力をたたえる。",
+    "usage": "相手の判断や見通しが的中したときに。",
+    "examples": ["あの段階で結果を見抜かれていたとは、さすがのご慧眼です。"],
+    "tags": ["ビジネス"],
+    "keywords": ["すごい", "褒める", "見事"]
+  },
+  {
+    "id": "builtin-0014",
+    "text": "感服いたしました",
+    "reading": "かんぷくいたしました",
+    "lang": "ja",
+    "scene": "praise",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "深く感心し、敬服した。",
+    "usage": "相手の振る舞いや仕事ぶりに心から感心したときに。",
+    "examples": ["最後まで筋を通されたお姿に感服いたしました。"],
+    "tags": [],
+    "keywords": ["すごい", "尊敬", "感心"]
+  },
+  {
+    "id": "builtin-0015",
+    "text": "My compliments.",
+    "lang": "en",
+    "scene": "praise",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "敬意を込めて称賛いたします。",
+    "usage": "\"My compliments to the chef.\" のように、称賛を伝えてほしい相手を続けることも多い。",
+    "examples": ["My compliments to the chef; the dinner was superb."],
+    "tags": [],
+    "keywords": ["すごい", "褒める", "praise"]
+  },
+  {
+    "id": "builtin-0016",
+    "text": "That was splendidly done.",
+    "lang": "en",
+    "scene": "praise",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "見事なお手並みでした。",
+    "usage": "相手の仕事や演技をたたえるときに。",
+    "examples": ["Your speech was splendidly done."],
+    "tags": ["英国風"],
+    "keywords": ["すごい", "見事", "well done"]
+  }
+]

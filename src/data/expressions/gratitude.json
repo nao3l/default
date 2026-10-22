@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0005",
+    "text": "痛み入ります",
+    "reading": "いたみいります",
+    "lang": "ja",
+    "scene": "gratitude",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "相手の厚意や気遣いに恐縮しながら感謝する。",
+    "usage": "目上の方からの心遣いに対して。",
+    "examples": ["ご丁寧なお心遣い、痛み入ります。"],
+    "tags": [],
+    "keywords": ["ありがとう", "感謝", "恐縮"]
+  },
+  {
+    "id": "builtin-0006",
+    "text": "身に余るお言葉です",
+    "reading": "みにあまるおことばです",
+    "lang": "ja",
+    "scene": "gratitude",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "自分には過分な褒め言葉だと謙遜しつつ感謝する。",
+    "usage": "褒められたときの返し。",
+    "examples": ["そのようにおっしゃっていただき、身に余るお言葉です。"],
+    "tags": [],
+    "keywords": ["ありがとう", "褒められた", "恐縮"]
+  },
+  {
+    "id": "builtin-0007",
+    "text": "I am much obliged.",
+    "lang": "en",
+    "scene": "gratitude",
+    "formality": 2,
+    "archaic": true,
+    "meaning": "大変感謝しております（恩義を感じております）。",
+    "usage": "助けてもらったときに。古風で丁重な響き。",
+    "examples": ["I am much obliged to you for your kind assistance."],
+    "tags": ["英国風"],
+    "keywords": ["ありがとう", "thanks", "thank you"]
+  },
+  {
+    "id": "builtin-0008",
+    "text": "That's most kind of you.",
+    "lang": "en",
+    "scene": "gratitude",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "ご親切にありがとうございます。",
+    "usage": "ちょっとした親切に対して。日常でも使える。",
+    "examples": ["You've saved me a seat? That's most kind of you."],
+    "tags": [],
+    "keywords": ["ありがとう", "thanks", "親切"]
+  }
+]

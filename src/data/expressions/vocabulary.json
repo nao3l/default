@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0045",
+    "text": "拝借する",
+    "reading": "はいしゃくする",
+    "lang": "ja",
+    "scene": "vocabulary",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "「借りる」のへりくだった言い方。",
+    "usage": "物だけでなく、知恵や時間にも使える。",
+    "examples": ["お知恵を拝借できますでしょうか。"],
+    "tags": ["謙譲語"],
+    "keywords": ["借りる", "謙譲語"]
+  },
+  {
+    "id": "builtin-0046",
+    "text": "僥倖",
+    "reading": "ぎょうこう",
+    "lang": "ja",
+    "scene": "vocabulary",
+    "formality": 3,
+    "archaic": true,
+    "meaning": "思いがけない幸運。",
+    "usage": "書き言葉寄りの格調ある語。",
+    "examples": ["この場で再会できたのは、まさに僥倖でした。"],
+    "tags": [],
+    "keywords": ["幸運", "ラッキー"]
+  },
+  {
+    "id": "builtin-0047",
+    "text": "splendid",
+    "lang": "en",
+    "scene": "vocabulary",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "見事な、素晴らしい。",
+    "usage": "英国風の上品な褒め言葉。",
+    "examples": ["What a splendid evening."],
+    "tags": ["英国風"],
+    "keywords": ["すばらしい", "great", "wonderful"]
+  },
+  {
+    "id": "builtin-0048",
+    "text": "pray",
+    "lang": "en",
+    "scene": "vocabulary",
+    "formality": 3,
+    "archaic": true,
+    "meaning": "どうか、願わくは（丁寧な依頼の前置き）。",
+    "usage": "命令文の頭に付けて丁寧にする古風な用法。",
+    "examples": ["Pray, be seated."],
+    "tags": ["英国風"],
+    "keywords": ["どうぞ", "please"]
+  }
+]

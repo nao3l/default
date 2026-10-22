@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0001",
+    "text": "ご機嫌麗しゅう",
+    "reading": "ごきげんうるわしゅう",
+    "lang": "ja",
+    "scene": "greeting",
+    "formality": 3,
+    "archaic": true,
+    "meaning": "相手が機嫌よく健やかであることを喜ぶ、格式ある挨拶。",
+    "usage": "現代では芝居がかった響きがあるため、改まった手紙や、少し洒落た場面で。",
+    "examples": ["殿下におかれましてはご機嫌麗しゅう存じます。"],
+    "tags": ["手紙向き"],
+    "keywords": ["こんにちは", "ごきげんよう", "挨拶"]
+  },
+  {
+    "id": "builtin-0002",
+    "text": "お目にかかれて光栄です",
+    "reading": "おめにかかれてこうえいです",
+    "lang": "ja",
+    "scene": "greeting",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "会えたことを名誉に思うと伝える挨拶。",
+    "usage": "初対面の方や目上の方に。",
+    "examples": ["ご高名はかねがね伺っております。お目にかかれて光栄です。"],
+    "tags": ["ビジネス"],
+    "keywords": ["はじめまして", "よろしく", "初対面"]
+  },
+  {
+    "id": "builtin-0003",
+    "text": "How do you do?",
+    "lang": "en",
+    "scene": "greeting",
+    "formality": 2,
+    "archaic": true,
+    "meaning": "初対面の改まった挨拶。「はじめまして」。",
+    "usage": "答えも同じく \"How do you do?\" と返すのが作法。調子を尋ねる質問ではない。現代では古風で格式張った響き。",
+    "examples": ["How do you do? I am delighted to make your acquaintance."],
+    "tags": ["英国風"],
+    "keywords": ["はじめまして", "hello", "nice to meet you"]
+  },
+  {
+    "id": "builtin-0004",
+    "text": "I'm delighted to make your acquaintance.",
+    "lang": "en",
+    "scene": "greeting",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "お知り合いになれて嬉しく思います。",
+    "usage": "紹介を受けた直後に。\"Nice to meet you.\" の改まった言い方。",
+    "examples": ["Mr. Sato, I'm delighted to make your acquaintance."],
+    "tags": [],
+    "keywords": ["はじめまして", "よろしく", "nice to meet you"]
+  }
+]

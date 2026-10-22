@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0009",
+    "text": "不徳の致すところです",
+    "reading": "ふとくのいたすところです",
+    "lang": "ja",
+    "scene": "apology",
+    "formality": 3,
+    "archaic": false,
+    "meaning": "自分の徳が足りないために起きたことだと、責任を認めて詫びる。",
+    "usage": "公の場での謝罪に。自分の責任として引き受けるときに使う。",
+    "examples": ["このような事態を招きましたのは、ひとえに私の不徳の致すところです。"],
+    "tags": ["ビジネス"],
+    "keywords": ["すみません", "ごめんなさい", "謝罪", "責任"]
+  },
+  {
+    "id": "builtin-0010",
+    "text": "心よりお詫び申し上げます",
+    "reading": "こころよりおわびもうしあげます",
+    "lang": "ja",
+    "scene": "apology",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "心の底から謝罪する気持ちを伝える。",
+    "usage": "口頭でも文書でも使える定番の謝罪。",
+    "examples": ["ご迷惑をおかけしましたこと、心よりお詫び申し上げます。"],
+    "tags": ["ビジネス"],
+    "keywords": ["すみません", "ごめんなさい", "謝罪"]
+  },
+  {
+    "id": "builtin-0011",
+    "text": "I beg your pardon.",
+    "lang": "en",
+    "scene": "apology",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "失礼いたしました。／何とおっしゃいましたか。",
+    "usage": "謝罪にも聞き返しにも使える。語尾を上げると聞き返しになる。",
+    "examples": ["I beg your pardon, I did not see you there."],
+    "tags": [],
+    "keywords": ["すみません", "sorry", "excuse me"]
+  },
+  {
+    "id": "builtin-0012",
+    "text": "Please accept my sincere apologies.",
+    "lang": "en",
+    "scene": "apology",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "心よりお詫び申し上げます。",
+    "usage": "手紙やメールでの正式な謝罪に。",
+    "examples": ["Please accept my sincere apologies for the delay."],
+    "tags": ["手紙向き"],
+    "keywords": ["すみません", "謝罪", "sorry", "apology"]
+  }
+]

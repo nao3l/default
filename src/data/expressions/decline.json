@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0021",
+    "text": "せっかくのお申し出ですが",
+    "reading": "せっかくのおもうしでですが",
+    "lang": "ja",
+    "scene": "decline",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "相手の厚意を受け止めたうえで断る前置き。",
+    "usage": "断る理由や代案を続けると角が立たない。",
+    "examples": ["せっかくのお申し出ですが、今回は辞退させていただきます。"],
+    "tags": ["ビジネス"],
+    "keywords": ["断る", "遠慮", "いいえ"]
+  },
+  {
+    "id": "builtin-0022",
+    "text": "今回は見送らせてください",
+    "reading": "こんかいはみおくらせてください",
+    "lang": "ja",
+    "scene": "decline",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "今回に限って辞退したいと、やわらかく断る。",
+    "usage": "次の機会への含みを残したいときに。",
+    "examples": ["大変魅力的なお話ですが、今回は見送らせてください。"],
+    "tags": [],
+    "keywords": ["断る", "遠慮", "いいえ"]
+  },
+  {
+    "id": "builtin-0023",
+    "text": "I'm afraid I must decline.",
+    "lang": "en",
+    "scene": "decline",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "申し訳ありませんが、お断りしなければなりません。",
+    "usage": "招待や申し出への丁寧な断り。",
+    "examples": ["Thank you for the invitation, but I'm afraid I must decline."],
+    "tags": [],
+    "keywords": ["断る", "no", "decline"]
+  },
+  {
+    "id": "builtin-0024",
+    "text": "I regret that I am unable to oblige.",
+    "lang": "en",
+    "scene": "decline",
+    "formality": 3,
+    "archaic": true,
+    "meaning": "残念ながらご期待に沿いかねます。",
+    "usage": "格式ある手紙での断りに。",
+    "examples": ["I regret that I am unable to oblige you on this occasion."],
+    "tags": ["手紙向き", "英国風"],
+    "keywords": ["断る", "no", "decline"]
+  }
+]

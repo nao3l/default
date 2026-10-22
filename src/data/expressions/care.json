@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0025",
+    "text": "ご自愛ください",
+    "reading": "ごじあいください",
+    "lang": "ja",
+    "scene": "care",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "ご自身のお体を大切にしてください、という気遣い。",
+    "usage": "「自愛」に体を大切にする意味が含まれるため、「お体ご自愛ください」は重複表現として避けるのが無難。",
+    "examples": ["寒さ厳しき折、どうぞご自愛ください。"],
+    "tags": ["手紙向き"],
+    "keywords": ["お大事に", "体調", "気遣い"]
+  },
+  {
+    "id": "builtin-0026",
+    "text": "どうぞご無理なさいませんよう",
+    "reading": "どうぞごむりなさいませんよう",
+    "lang": "ja",
+    "scene": "care",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "無理をしないでくださいと、相手を気遣う。",
+    "usage": "忙しい相手や体調を崩した相手に。",
+    "examples": ["お忙しい時期かと存じますが、どうぞご無理なさいませんよう。"],
+    "tags": [],
+    "keywords": ["お大事に", "気遣い", "体調"]
+  },
+  {
+    "id": "builtin-0027",
+    "text": "Do take care of yourself.",
+    "lang": "en",
+    "scene": "care",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "どうぞお体を大切に。",
+    "usage": "\"Do\" を添えることで気持ちがこもる。別れ際に。",
+    "examples": ["It was lovely to see you. Do take care of yourself."],
+    "tags": [],
+    "keywords": ["お大事に", "take care", "気遣い"]
+  },
+  {
+    "id": "builtin-0028",
+    "text": "I trust you are keeping well.",
+    "lang": "en",
+    "scene": "care",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "お元気でお過ごしのことと存じます。",
+    "usage": "手紙やメールの書き出しに。",
+    "examples": ["Dear Mr. Tanaka, I trust you are keeping well."],
+    "tags": ["手紙向き"],
+    "keywords": ["お元気ですか", "気遣い", "手紙"]
+  }
+]

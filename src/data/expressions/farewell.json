@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0041",
+    "text": "どうぞご息災で",
+    "reading": "どうぞごそくさいで",
+    "lang": "ja",
+    "scene": "farewell",
+    "formality": 2,
+    "archaic": true,
+    "meaning": "病気や災いなく元気でいてくださいという別れの言葉。",
+    "usage": "しばらく会えない相手との別れに。",
+    "examples": ["次にお会いする日まで、どうぞご息災で。"],
+    "tags": [],
+    "keywords": ["さようなら", "元気で", "別れ"]
+  },
+  {
+    "id": "builtin-0042",
+    "text": "名残惜しいですが",
+    "reading": "なごりおしいですが",
+    "lang": "ja",
+    "scene": "farewell",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "別れがたい気持ちを添えて、辞去を切り出す。",
+    "usage": "会食や訪問の終わりに。",
+    "examples": ["名残惜しいですが、そろそろお暇いたします。"],
+    "tags": [],
+    "keywords": ["さようなら", "帰る", "別れ"]
+  },
+  {
+    "id": "builtin-0043",
+    "text": "I bid you good day.",
+    "lang": "en",
+    "scene": "farewell",
+    "formality": 2,
+    "archaic": true,
+    "meaning": "それでは失礼いたします（ごきげんよう）。",
+    "usage": "古風で改まった別れの挨拶。",
+    "examples": ["Thank you for your time. I bid you good day."],
+    "tags": ["英国風"],
+    "keywords": ["さようなら", "goodbye"]
+  },
+  {
+    "id": "builtin-0044",
+    "text": "It has been a pleasure.",
+    "lang": "en",
+    "scene": "farewell",
+    "formality": 1,
+    "archaic": false,
+    "meaning": "楽しいひとときでした。",
+    "usage": "会った相手への別れ際のひと言。",
+    "examples": ["It has been a pleasure, Mrs. Hughes. Until next time."],
+    "tags": [],
+    "keywords": ["さようなら", "楽しかった", "goodbye"]
+  }
+]

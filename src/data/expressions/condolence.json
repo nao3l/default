@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0033",
+    "text": "謹んでお悔やみ申し上げます",
+    "reading": "つつしんでおくやみもうしあげます",
+    "lang": "ja",
+    "scene": "condolence",
+    "formality": 3,
+    "archaic": false,
+    "meaning": "故人の死を悼み、遺族に弔意を伝える。",
+    "usage": "弔事では「重ね重ね」「たびたび」などの重ね言葉を避ける。",
+    "examples": ["ご尊父様のご逝去に際し、謹んでお悔やみ申し上げます。"],
+    "tags": ["弔事", "手紙向き"],
+    "keywords": ["お悔やみ", "弔意", "葬儀", "訃報"]
+  },
+  {
+    "id": "builtin-0034",
+    "text": "ご愁傷様でございます",
+    "reading": "ごしゅうしょうさまでございます",
+    "lang": "ja",
+    "scene": "condolence",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "遺族の悲しみを思いやる言葉。",
+    "usage": "通夜や葬儀の場で、口頭で使う。文書では「お悔やみ申し上げます」を使う。",
+    "examples": ["このたびはご愁傷様でございます。"],
+    "tags": ["弔事"],
+    "keywords": ["お悔やみ", "葬儀"]
+  },
+  {
+    "id": "builtin-0035",
+    "text": "Please accept my deepest condolences.",
+    "lang": "en",
+    "scene": "condolence",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "心よりお悔やみ申し上げます。",
+    "usage": "\"on the loss of ...\" で故人を続ける。",
+    "examples": ["Please accept my deepest condolences on the loss of your father."],
+    "tags": ["弔事"],
+    "keywords": ["お悔やみ", "condolences"]
+  },
+  {
+    "id": "builtin-0036",
+    "text": "You have my deepest sympathy.",
+    "lang": "en",
+    "scene": "condolence",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "心からお悔やみ申し上げます。",
+    "usage": "口頭でもカードでも使える。",
+    "examples": ["You and your family have my deepest sympathy."],
+    "tags": ["弔事"],
+    "keywords": ["お悔やみ", "sympathy"]
+  }
+]

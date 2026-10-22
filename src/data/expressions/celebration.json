@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0029",
+    "text": "心よりお喜び申し上げます",
+    "reading": "こころよりおよろこびもうしあげます",
+    "lang": "ja",
+    "scene": "celebration",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "相手の慶事を心から祝う。",
+    "usage": "昇進、結婚、受賞などの祝意に。",
+    "examples": ["ご栄転、心よりお喜び申し上げます。"],
+    "tags": ["手紙向き"],
+    "keywords": ["おめでとう", "祝い"]
+  },
+  {
+    "id": "builtin-0030",
+    "text": "慶賀に堪えません",
+    "reading": "けいがにたえません",
+    "lang": "ja",
+    "scene": "celebration",
+    "formality": 3,
+    "archaic": true,
+    "meaning": "大変めでたく、喜ばしい限りです。",
+    "usage": "式典の祝辞や格式ある祝い状に。",
+    "examples": ["創立百周年を迎えられましたこと、誠に慶賀に堪えません。"],
+    "tags": ["手紙向き"],
+    "keywords": ["おめでとう", "祝い", "祝辞"]
+  },
+  {
+    "id": "builtin-0031",
+    "text": "My heartiest congratulations.",
+    "lang": "en",
+    "scene": "celebration",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "心よりお祝い申し上げます。",
+    "usage": "\"on ...\" で祝う出来事を続ける。",
+    "examples": ["My heartiest congratulations on your promotion."],
+    "tags": [],
+    "keywords": ["おめでとう", "congratulations"]
+  },
+  {
+    "id": "builtin-0032",
+    "text": "Many happy returns of the day.",
+    "lang": "en",
+    "scene": "celebration",
+    "formality": 2,
+    "archaic": true,
+    "meaning": "お誕生日おめでとうございます（この日が幾度も巡ってきますように）。",
+    "usage": "誕生日の古風な祝いの言葉。",
+    "examples": ["Many happy returns of the day, my dear fellow."],
+    "tags": ["英国風"],
+    "keywords": ["おめでとう", "誕生日", "happy birthday"]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "builtin-0017",
+    "text": "ご高配を賜りますようお願い申し上げます",
+    "reading": "ごこうはいをたまわりますようおねがいもうしあげます",
+    "lang": "ja",
+    "scene": "request",
+    "formality": 3,
+    "archaic": false,
+    "meaning": "格別のご配慮をお願いする、手紙や挨拶状の定型句。",
+    "usage": "文書の結びに。",
+    "examples": ["今後とも変わらぬご高配を賜りますようお願い申し上げます。"],
+    "tags": ["手紙向き", "ビジネス"],
+    "keywords": ["お願い", "よろしく", "配慮"]
+  },
+  {
+    "id": "builtin-0018",
+    "text": "恐縮ですが",
+    "reading": "きょうしゅくですが",
+    "lang": "ja",
+    "scene": "request",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "相手に手間をかけることを申し訳なく思う気持ちを添える前置き。",
+    "usage": "依頼の文の頭に付ける。",
+    "examples": ["恐縮ですが、こちらにご署名をいただけますでしょうか。"],
+    "tags": ["ビジネス"],
+    "keywords": ["お願い", "すみませんが", "前置き"]
+  },
+  {
+    "id": "builtin-0019",
+    "text": "Would you be so kind as to...?",
+    "lang": "en",
+    "scene": "request",
+    "formality": 2,
+    "archaic": false,
+    "meaning": "〜していただけますでしょうか。",
+    "usage": "丁寧な依頼。\"...\" には動詞の原形が入る。",
+    "examples": ["Would you be so kind as to pass the salt?"],
+    "tags": [],
+    "keywords": ["お願い", "please", "could you"]
+  },
+  {
+    "id": "builtin-0020",
+    "text": "Might I trouble you to...?",
+    "lang": "en",
+    "scene": "request",
+    "formality": 2,
+    "archaic": true,
+    "meaning": "お手数ですが〜していただけますか。",
+    "usage": "相手に手間をかけることを気遣う、古風で丁重な依頼。",
+    "examples": ["Might I trouble you to close the window?"],
+    "tags": ["英国風"],
+    "keywords": ["お願い", "please", "すみませんが"]
+  }
+]
