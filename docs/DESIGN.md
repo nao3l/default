@@ -157,9 +157,15 @@ interface Expression {
   examples: string[]; // 例文
   tags: string[];
   keywords: string[]; // 検索用の言い換え語（例：ありがとう、thanks）
-  citation?: string; // 出典（書名・URL など）
+  citation?: Citation; // 出典。無ければ「出典未詳」と表示
   createdAt?: string; // 登録表現のみ（ISO 8601）
   updatedAt?: string;
+}
+
+interface Citation {
+  title: string; // 例：デジタル大辞泉「痛み入る」
+  publisher?: string; // 例：小学館
+  url?: string; // http(s) のみ
 }
 
 interface Annotation {
@@ -272,7 +278,11 @@ tests/
 
 ### 出典の扱い
 
-件数が増えるほど、正確さの担保が重要になります。当面は表現ごとに出典（`citation`）を任意項目として持ち、出典のある表現には印を付けて表示します。
+件数が増えるほど、正確さの担保が重要になります。表現ごとに出典（`citation`：書名・発行元・URL）を持たせ、下の優先順で選びます。実際に開いて内容を確かめたページだけを出典にし、確かめられないものは「出典未詳」と表示します。一覧のカードには「出典あり」の印を付けます。
+
+1. **公的機関**：文化庁（「敬語の指針」など）、国立国語研究所
+2. **辞書出版社の辞書**：日本語はデジタル大辞泉（小学館）など、英語は Cambridge Dictionary、Oxford Learner's Dictionaries、Merriam-Webster
+3. **出典未詳**：上記で確かめられないもの。個人ブログやまとめサイトは出典にしない
 
 ## 品質・開発運用
 
