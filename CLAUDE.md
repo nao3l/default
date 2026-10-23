@@ -21,6 +21,7 @@
 
 - 該当する場面の JSON に追記する。`id` は `builtin-NNNN` の連番で、既存の id は変えない
 - 必須: `id` `text` `lang` `scene` `formality`(1〜3) `archaic` `examples` `tags` `keywords`
+- 言語は `ja` `en` `fr` `de` `it` `es`。各場面にすべての言語が 1 件以上あることをテストで検査している
 - 日本語は `reading` を必ず付ける。`keywords` には「ありがとう」「thanks」など、検索で引かれたい言い換え語を入れる
 - `citation`（書名・発行元・URL）は、実際に開いて内容を確かめたページだけを書く。優先順は公的機関（文化庁など）→ 辞書出版社の辞書（デジタル大辞泉、Cambridge、Oxford Learner's、Merriam-Webster など）。確かめられなければ項目ごと省く（画面には「出典未詳」と出る）
 - `npm test` が形式・重複・場面の不一致を検査する

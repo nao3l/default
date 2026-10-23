@@ -36,11 +36,20 @@ export const FORMALITY_LABELS: Record<Formality, string> = {
   3: '儀礼・文語',
 };
 
-export const LANG_LABELS: Record<Lang, string> = { ja: '日本語', en: '英語' };
+export const LANGS = ['ja', 'en', 'fr', 'de', 'it', 'es'] as const;
+
+export const LANG_LABELS: Record<Lang, string> = {
+  ja: '日本語',
+  en: '英語',
+  fr: 'フランス語',
+  de: 'ドイツ語',
+  it: 'イタリア語',
+  es: 'スペイン語',
+};
 
 export const sceneSchema = z.enum(SCENES);
 export const formalitySchema = z.union([z.literal(1), z.literal(2), z.literal(3)]);
-export const langSchema = z.enum(['ja', 'en']);
+export const langSchema = z.enum(LANGS);
 
 const nonEmpty = z.string().trim().min(1);
 

@@ -1,19 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { SCENES } from '../domain/expression';
+import { LANGS, SCENES } from '../domain/expression';
 import { builtinExpressions, parseBuiltin } from './builtin';
 
 describe('収録データ', () => {
-  it('すべての場面に日本語と英語の表現がある', () => {
+  it('すべての場面に、すべての言語の表現がある', () => {
     for (const scene of SCENES) {
-      const inScene = builtinExpressions.filter((e) => e.scene === scene);
-      expect(
-        inScene.some((e) => e.lang === 'ja'),
-        `${scene} の日本語`,
-      ).toBe(true);
-      expect(
-        inScene.some((e) => e.lang === 'en'),
-        `${scene} の英語`,
-      ).toBe(true);
+      for (const lang of LANGS) {
+        const found = builtinExpressions.some((e) => e.scene === scene && e.lang === lang);
+        expect(found, `${scene} / ${lang}`).toBe(true);
+      }
     }
   });
 

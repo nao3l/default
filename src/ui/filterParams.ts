@@ -1,4 +1,4 @@
-import { SCENES, type Formality, type Lang, type Scene } from '../domain/expression';
+import { LANGS, SCENES, type Formality, type Lang, type Scene } from '../domain/expression';
 import { EMPTY_FILTERS, type SearchFilters, type SortOrder } from '../search/search';
 
 // 絞り込み条件を URL に持たせ、詳細画面から戻っても条件が残るようにする
@@ -12,7 +12,7 @@ export function filtersFromParams(params: URLSearchParams): SearchFilters {
     query: params.get('q') ?? '',
     scene: SCENES.includes(scene as Scene) ? (scene as Scene) : null,
     formality: [1, 2, 3].includes(formality) ? (formality as Formality) : null,
-    lang: lang === 'ja' || lang === 'en' ? (lang as Lang) : null,
+    lang: LANGS.includes(lang as Lang) ? (lang as Lang) : null,
     archaic: archaic === 'only' || archaic === 'exclude' ? archaic : 'include',
   };
 }

@@ -22,13 +22,15 @@ export const EMPTY_FILTERS: SearchFilters = {
 
 export type SortOrder = 'relevance' | 'formality' | 'newest';
 
-// 全角・半角、大文字・小文字、カタカナ・ひらがなの違いを吸収する
+// 全角・半角、大文字・小文字、カタカナ・ひらがな、アクセント記号の有無の違いを吸収する
 export function normalize(text: string): string {
   return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // é → e。かなの濁点（U+3099）は範囲外なので残る
     .normalize('NFKC')
     .toLowerCase()
     .replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
-    .replace(/[\s'’".,!?…]/g, '');
+    .replace(/[\s'’".,!?¡¿…]/g, '');
 }
 
 // 一致した項目の重みを合計する。0 は不一致。

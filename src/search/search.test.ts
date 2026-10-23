@@ -50,6 +50,12 @@ describe('normalize', () => {
     expect(normalize('アリガトウ')).toBe(normalize('ありがとう'));
     expect(normalize('ＯＢＬＩＧＥＤ')).toBe('obliged');
   });
+
+  it('アクセント記号を外すが、かなの濁点は残す', () => {
+    expect(normalize('Enchanté')).toBe('enchante');
+    expect(normalize('¿Sería tan amable?')).toBe('seriatanamable');
+    expect(normalize('ご機嫌')).not.toBe(normalize('こ機嫌'));
+  });
 });
 
 describe('search', () => {

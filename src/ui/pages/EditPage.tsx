@@ -96,8 +96,13 @@ function toDraft(form: FormState, scene: Scene): ExpressionDraft {
   };
 }
 
-// 英字だけの表現なら英語とみなす（登録時の手間を減らすため）
-const guessLang = (text: string): Lang => (/^[\x20-\x7e’‘“”…]+$/.test(text.trim()) ? 'en' : 'ja');
+// 英字だけなら英語、かな・漢字を含めば日本語とみなす（登録時の手間を減らすため）。
+// アクセント付きの文字は欧州のどの言語か決められないので、選択中の言語を保つ
+function guessLang(text: string, current: Lang): Lang {
+  if (/[\u3040-\u30ff\u4e00-\u9fff]/.test(text)) return 'ja';
+  if (/^[\x20-\x7e’‘“”…]+$/.test(text.trim())) return 'en';
+  return current;
+}
 
 export function EditPage() {
   const { id } = useParams();
@@ -143,7 +148,7 @@ export function EditPage() {
           onChange={(e) =>
             set({
               text: e.target.value,
-              ...(langTouched ? {} : { lang: guessLang(e.target.value) }),
+              ...(langTouched ? {} : { lang: guessLang(e.target.value, form.lang) }),
             })
           }
           placeholder="例：痛み入ります / I am much obliged."
