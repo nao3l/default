@@ -1,0 +1,23 @@
+name = "phrasebook-access-log"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+
+[vars]
+# 記録を受け付けるサイト（カンマ区切り）
+ALLOWED_ORIGINS = "https://nao3l.github.io"
+# 記録の保存日数。これより古い記録は毎日自動で削除する
+RETENTION_DAYS = "90"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "phrasebook-access-log"
+# `npx wrangler d1 create phrasebook-access-log` で表示される ID に置き換える
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"
+migrations_dir = "migrations"
+
+# 毎日 3:17（UTC）に古い記録を削除する
+[triggers]
+crons = ["17 3 * * *"]
+
+# 閲覧画面の合言葉は設定ファイルに書かず、次のコマンドで登録する:
+#   npx wrangler secret put ADMIN_TOKEN

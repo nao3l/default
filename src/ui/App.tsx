@@ -1,4 +1,6 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { reportView } from '../telemetry/accessLog';
 import { DetailPage } from './pages/DetailPage';
 import { EditPage } from './pages/EditPage';
 import { HomePage } from './pages/HomePage';
@@ -13,6 +15,9 @@ const NAV = [
 ];
 
 export function App() {
+  const { pathname } = useLocation();
+  useEffect(() => reportView(pathname), [pathname]);
+
   return (
     <div className="app">
       <header className="header">

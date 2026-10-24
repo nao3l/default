@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent } from 'react';
+import { accessLogEnabled, accessLogRetentionDays } from '../../telemetry/accessLog';
 import { useApp } from '../AppContext';
 import { applyTheme, loadTheme, type Theme } from '../theme';
 
@@ -86,6 +87,26 @@ export function SettingsPage() {
         </p>
         <p>登録した内容はこの端末のブラウザ内にだけ保存され、外部には送信されません。</p>
       </section>
+
+      {accessLogEnabled && (
+        <section aria-labelledby="access-log-title">
+          <h2 id="access-log-title">アクセス記録について</h2>
+          <p>
+            不正なアクセスの調査と利用状況の把握のため、画面を開くたびに次の情報を記録しています。
+          </p>
+          <ul>
+            <li>日時、開いた画面、遷移元のページ</li>
+            <li>接続元の IP アドレスと、そこから推定される国・地域・通信事業者</li>
+            <li>ブラウザの種類（User-Agent）</li>
+            <li>同じタブでの閲覧をまとめるためのランダムな識別子</li>
+          </ul>
+          <p>
+            登録した表現、メモ、検索した言葉は記録しません。記録は管理者だけが閲覧でき、
+            {accessLogRetentionDays}{' '}
+            日を過ぎると自動で削除します。法令に基づく場合を除き、第三者には提供しません。
+          </p>
+        </section>
+      )}
     </div>
   );
 }

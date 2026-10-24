@@ -8,3 +8,4 @@ fi
 
 cd "${CLAUDE_PROJECT_DIR:-$(dirname "$0")/../..}"
 npm ci --no-audit --no-fund
+npm ci --no-audit --no-fund --prefix worker

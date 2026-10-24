@@ -9,6 +9,8 @@
 - `src/domain/` 型と Zod スキーマ
 - `src/store/` リポジトリ層。収録データと IndexedDB（登録表現・お気に入り・メモ）を統合する唯一の窓口
 - `src/search/` 端末内検索（正規化した部分一致 + 重み付け）
+- `src/telemetry/` 閲覧記録の送信。受け口の URL（`VITE_ACCESS_LOG_URL`）が未設定なら何もしない
+- `worker/` 閲覧記録の受け口（Cloudflare Workers + D1）。別パッケージ。手順は `docs/ACCESS_LOG.md`
 - `src/ui/` 画面。ルーティングは HashRouter（GitHub Pages で深い URL を開けるようにするため）
 
 ## コマンド
@@ -16,6 +18,7 @@
 - `npm run check` 型チェック・リント・整形確認・単体テストをまとめて実行。プッシュ前に必ず通す
 - `npm run test:e2e` Playwright の E2E テスト（ビルドしてから起動する）
 - `npm run dev` 開発サーバー
+- `cd worker && npm run typecheck && npm test` 受け口の型チェックとテスト
 
 ## 収録表現の追加
 
