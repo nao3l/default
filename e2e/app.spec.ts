@@ -25,10 +25,14 @@ test('場面・言語・古風で絞り込める', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: '感謝' }).click();
   await page.getByLabel('古風').selectOption('only');
-  await expect(page.getByText('2 件')).toBeVisible();
   await page.getByLabel('言語').selectOption('en');
-  await expect(page.getByText('1 件')).toBeVisible();
-  await expect(page.getByRole('link', { name: /I am much obliged/ })).toBeVisible();
+
+  // 収録件数が増えても壊れないよう、件数ではなく「残るもの・消えるもの」で確かめる
+  const results = page.locator('.card-list');
+  await expect(results.getByRole('link', { name: /I am much obliged/ })).toBeVisible();
+  await expect(results.getByRole('link', { name: /most kind of you/ })).toHaveCount(0); // 古風でない
+  await expect(results.getByRole('link', { name: /恐悦至極/ })).toHaveCount(0); // 日本語
+  await expect(results.getByRole('link', { name: /humble servant/ })).toHaveCount(0); // 謙遜
 });
 
 test('表現を登録し、再読み込み後も残っている', async ({ page }) => {
