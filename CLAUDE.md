@@ -4,7 +4,7 @@
 
 ## 構成
 
-- TypeScript + React + Vite の静的サイト。サーバーなし。GitHub Pages で公開
+- TypeScript + React + Vite の静的サイト。サーバーなし。GitHub Pages と Cloudflare Workers（名前 `default`、設定は最上位の `wrangler.jsonc`）の両方で公開
 - `src/data/expressions/<scene>.json` 収録表現（場面ごとに 1 ファイル）
 - `src/domain/` 型と Zod スキーマ
 - `src/store/` リポジトリ層。収録データと IndexedDB（登録表現・お気に入り・メモ）を統合する唯一の窓口
