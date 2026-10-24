@@ -15,11 +15,11 @@ export function FilterBar({
   onOrderChange,
 }: {
   filters: SearchFilters;
-  onChange: (next: SearchFilters) => void;
+  onChange: (patch: Partial<SearchFilters>) => void;
   order: SortOrder;
   onOrderChange: (next: SortOrder) => void;
 }) {
-  const set = (patch: Partial<SearchFilters>) => onChange({ ...filters, ...patch });
+  const set = onChange;
 
   return (
     <div className="filters">

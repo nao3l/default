@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { pickOfTheDay, search } from '../../search/search';
+import { pickOfTheDay, search, type SearchFilters, type SortOrder } from '../../search/search';
 import { useApp } from '../AppContext';
 import { ExpressionList } from '../components/ExpressionList';
 import { FilterBar } from '../components/FilterBar';
@@ -11,6 +11,24 @@ export function HomePage() {
   const [params, setParams] = useSearchParams();
   const filters = filtersFromParams(params);
   const order = orderFromParams(params);
+
+  // 描画時点の条件ではなく、直前に反映した条件を基準に更新する。
+  // 再描画の前に続けて操作されても、先に選んだ条件が消えないようにするため
+  // （React Router の関数形式の更新も描画時点の値を基準にするので、自前で保持する）
+  const latest = useRef(params);
+  useEffect(() => {
+    latest.current = params;
+  }, [params]);
+
+  const update = (patch: Partial<SearchFilters>, nextOrder?: SortOrder) => {
+    const prev = latest.current;
+    const next = toParams(
+      { ...filtersFromParams(prev), ...patch },
+      nextOrder ?? orderFromParams(prev),
+    );
+    latest.current = next;
+    setParams(next, { replace: true });
+  };
 
   const results = useMemo(
     () => search(expressions, annotations, filters, order),
@@ -45,17 +63,15 @@ export function HomePage() {
           aria-label="表現を検索"
           placeholder="例：ありがとう、断る、obliged"
           value={filters.query}
-          onChange={(e) =>
-            setParams(toParams({ ...filters, query: e.target.value }, order), { replace: true })
-          }
+          onChange={(e) => update({ query: e.target.value })}
         />
       </div>
 
       <FilterBar
         filters={filters}
-        onChange={(next) => setParams(toParams(next, order), { replace: true })}
+        onChange={(patch) => update(patch)}
         order={order}
-        onOrderChange={(next) => setParams(toParams(filters, next), { replace: true })}
+        onOrderChange={(next) => update({}, next)}
       />
 
       <p className="count" aria-live="polite">
