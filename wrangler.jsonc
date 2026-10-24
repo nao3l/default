@@ -1,9 +1,13 @@
 // Cloudflare Workers（名前: default）でサイトを配信するための設定。
-// Cloudflare 側でビルド（npm run build）した後、`npx wrangler deploy` が dist を公開する。
+// `npx wrangler deploy` が npm run build で dist を作り、それを公開する。
 // 閲覧記録の受け口の設定は worker/wrangler.toml にあり、こちらとは別。
 {
   "name": "default",
   "compatibility_date": "2026-10-01",
+  // 公開の直前に必ずビルドする。Cloudflare 側の Build command の設定に左右されないようにするため
+  "build": {
+    "command": "npm run build",
+  },
   "assets": {
     "directory": "./dist",
   },
